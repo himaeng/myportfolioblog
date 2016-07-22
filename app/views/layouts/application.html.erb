@@ -10,14 +10,23 @@
 </head>
 <body>
 	<header id="main_navigation" class="clearfix">
-		<a href="#" class="name">Tanakorn</a>
+		<%= link_to "Tanakorn", root_path, class: "name" %>
 		<nav>
 			<%= link_to "Articles", posts_path %>
 			<a href="#">Projects</a>
 			<a href="#">Contacts</a>
 		</nav>
 	</header>
-<%= yield %>
 
+	<%= yield %>
+
+	<footer id="main_footer">
+		<p class="copyright">&copy;2016 Tanakorn Numrubporn</p>
+		<nav>
+			<a href="http://twitter.com/himaeng" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="http://www.facebook.com/tanakorn.numrubporn" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="http://github.com/himaeng" target="_blank"><i class="fa fa-github"></i></a>
+		</nav>
+	</footer>
 </body>
 </html>
