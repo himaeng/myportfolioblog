@@ -13,8 +13,13 @@
 		</div>
 	</div>
 
-	<%= link_to "Edit", edit_project_path %>
-	<%= link_to "Delete", project_path, method: :delete, data: {confirm: "Are you sure"} %>
+
+	<% if user_signed_in? %>
+		<div id="admin_links">
+			<%= link_to "Edit", edit_project_path %>
+			<%= link_to "Delete", project_path, method: :delete, data: {confirm: "Are you sure"} %>
+		</div>
+	<% end %>
 
 	<hr>
 </div>
